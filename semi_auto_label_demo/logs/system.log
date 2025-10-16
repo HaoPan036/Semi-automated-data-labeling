@@ -1,0 +1,47 @@
+2025-10-10 14:11:10,820 - src.utils - INFO - Logging initialized at INFO level
+2025-10-10 14:11:10,820 - __main__ - INFO - ================================================================================
+2025-10-10 14:11:10,820 - __main__ - INFO - STAGE 1: SYNTHETIC DATA GENERATION
+2025-10-10 14:11:10,820 - __main__ - INFO - ================================================================================
+2025-10-10 14:11:10,820 - src.utils - INFO - Generating 250 synthetic samples
+2025-10-10 14:11:10,823 - src.utils - INFO - Generated 250 synthetic samples
+2025-10-10 14:11:10,825 - src.utils - INFO - Results saved to semi_auto_label_demo/data/raw_dataset.csv (250 records)
+2025-10-10 14:11:10,825 - __main__ - INFO - Stage 1 completed: 250 samples generated
+2025-10-10 14:11:10,825 - __main__ - INFO - ================================================================================
+2025-10-10 14:11:10,825 - __main__ - INFO - STAGE 2: LLM-BASED INITIAL LABELING
+2025-10-10 14:11:10,825 - __main__ - INFO - ================================================================================
+2025-10-10 14:11:10,826 - src.llm_generator - INFO - Generating LLM labels for 250 texts with 15.0% noise rate
+2025-10-10 14:11:10,827 - src.llm_generator - INFO - LLM labeling completed. Generated 250 predictions
+2025-10-10 14:11:10,828 - src.utils - INFO - Results saved to semi_auto_label_demo/data/llm_annotations.csv (250 records)
+2025-10-10 14:11:10,828 - __main__ - INFO - Stage 2 completed: LLM accuracy = 0.840
+2025-10-10 14:11:10,828 - __main__ - INFO - ================================================================================
+2025-10-10 14:11:10,828 - __main__ - INFO - STAGE 3: RULE-BASED VALIDATION
+2025-10-10 14:11:10,828 - __main__ - INFO - ================================================================================
+2025-10-10 14:11:10,828 - src.rule_checker - INFO - Applying rule-based checks to 250 predictions
+2025-10-10 14:11:10,829 - src.rule_checker - INFO - Rule checking completed. Made 40 corrections, flagged 40 items for review
+2025-10-10 14:11:10,830 - src.utils - INFO - Results saved to semi_auto_label_demo/data/rule_checked.csv (250 records)
+2025-10-10 14:11:10,830 - __main__ - INFO - Stage 3 completed: 40 items flagged
+2025-10-10 14:11:10,830 - __main__ - INFO - ================================================================================
+2025-10-10 14:11:10,830 - __main__ - INFO - STAGE 4: ML MODEL VALIDATION
+2025-10-10 14:11:10,830 - __main__ - INFO - ================================================================================
+2025-10-10 14:11:10,830 - src.model_validator - INFO - Validating 250 labels using ML model
+2025-10-10 14:11:10,830 - src.model_validator - INFO - Training ML validator on 250 samples
+2025-10-10 14:11:10,842 - src.model_validator - INFO - ML model training completed. Validation accuracy: 1.000
+2025-10-10 14:11:10,846 - src.model_validator - INFO - ML validation completed. Found 0 disagreements
+2025-10-10 14:11:10,847 - src.utils - INFO - Results saved to semi_auto_label_demo/data/ml_validated.csv (250 records)
+2025-10-10 14:11:10,847 - __main__ - INFO - Stage 4 completed: 40 total items flagged
+2025-10-10 14:11:10,847 - __main__ - INFO - ================================================================================
+2025-10-10 14:11:10,847 - __main__ - INFO - STAGE 5: HUMAN-IN-THE-LOOP CORRECTION
+2025-10-10 14:11:10,847 - __main__ - INFO - ================================================================================
+2025-10-10 14:11:10,847 - src.human_review - INFO - Starting human review for 40 flagged items
+2025-10-10 14:11:10,847 - src.human_review - INFO - Human review completed. Made 0 corrections
+2025-10-10 14:11:10,848 - src.utils - INFO - Results saved to semi_auto_label_demo/outputs/final_labeled_dataset.csv (250 records)
+2025-10-10 14:11:10,848 - __main__ - INFO - Stage 5 completed: Final accuracy = 1.000
+2025-10-10 14:11:10,848 - __main__ - INFO - ================================================================================
+2025-10-10 14:11:10,848 - __main__ - INFO - STAGE 6: EVALUATION AND VISUALIZATION
+2025-10-10 14:11:10,848 - __main__ - INFO - ================================================================================
+2025-10-10 14:11:10,850 - src.utils - INFO - Calculated metrics: Accuracy=1.000, F1=1.000
+2025-10-10 14:11:10,850 - src.utils - INFO - Generating visualization charts
+2025-10-10 14:11:11,166 - src.utils - INFO - Visualization saved to semi_auto_label_demo/outputs/label_comparison.png
+2025-10-10 14:11:11,167 - src.utils - INFO - Metrics summary saved to semi_auto_label_demo/outputs/metrics_summary.txt
+2025-10-10 14:11:11,167 - __main__ - INFO - Stage 6 completed: Evaluation and visualization finished
+2025-10-10 14:11:11,167 - src.utils - INFO - 🎉 Semi-automated labeling system completed successfully!

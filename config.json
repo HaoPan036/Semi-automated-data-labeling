@@ -1,0 +1,17 @@
+{
+  "base_output_dir": "semi_auto_label_demo",
+  "paths": {
+    "data": "data",
+    "outputs": "outputs",
+    "logs": "logs"
+  },
+  "labeling": {
+    "categories": ["sports", "politics", "tech", "entertainment"],
+    "llm_noise_rate": 0.15
+  },
+  "ml": {
+    "tfidf_max_features": 1000,
+    "tfidf_ngram_min": 1,
+    "tfidf_ngram_max": 2
+  }
+}

@@ -1,0 +1,27 @@
+================================================================================
+SEMI-AUTOMATED DATA LABELING SYSTEM - EVALUATION SUMMARY
+================================================================================
+
+SYSTEM PERFORMANCE:
+--------------------------------------------------
+Final Accuracy: 100.0%
+Precision: 1.000
+Recall: 1.000
+F1-Score: 1.000
+
+WORKLOAD EFFICIENCY:
+--------------------------------------------------
+Total items processed: 250
+Items requiring human review: 40
+Human review percentage: 16.0%
+Automation rate: 84.0%
+
+PER-CATEGORY PERFORMANCE:
+--------------------------------------------------
+entertainment  : Precision=1.000, Recall=1.000, F1=1.000
+politics       : Precision=1.000, Recall=1.000, F1=1.000
+sports         : Precision=1.000, Recall=1.000, F1=1.000
+tech           : Precision=1.000, Recall=1.000, F1=1.000
+
+================================================================================
+Generated on: 2025-10-10 14:11:11
